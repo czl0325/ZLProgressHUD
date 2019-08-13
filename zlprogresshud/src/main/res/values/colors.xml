@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="bgColor_overlay_black">#95000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_progress_default_view">@android:color/white</color>
+    <!--标题颜色-->
+    <color name="textColor_progress_hud_default_msg">#000000</color>
+    <color name="roundColor_progress_hud_default">#e5e5e5</color>
+    <color name="roundProgressColor_progress_hud_default">@android:color/black</color>
+
+</resources>
