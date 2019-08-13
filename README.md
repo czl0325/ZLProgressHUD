@@ -1,2 +1,2 @@
 # ZLProgressHUD
-基于svprogresshud做了优化的android loading框
+基于svprogresshud做了优化的android loading框，显示加载成功失败的hud
