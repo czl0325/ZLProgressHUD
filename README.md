@@ -5,9 +5,18 @@
 ### 导入
 
 ```
-implementation 'com.github.czl0325:zlprogresshud:0.0.1'
+implementation 'com.github.czl0325:ZLProgressHUD:0.0.1'
 ```
 
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+        
 ### 屏幕截图
 
 ![](https://github.com/czl0325/ZLProgressHUD/blob/master/screenshot/demo1.gif?raw=true)![](https://github.com/czl0325/ZLProgressHUD/blob/master/screenshot/demo2.gif?raw=true)![](https://github.com/czl0325/ZLProgressHUD/blob/master/screenshot/demo3.gif?raw=true)![](https://github.com/czl0325/ZLProgressHUD/blob/master/screenshot/demo4.gif?raw=true)![](https://github.com/czl0325/ZLProgressHUD/blob/master/screenshot/demo5.gif?raw=true)
