@@ -5,7 +5,7 @@
 ### 导入
 
 ```
-compile 'com.github.czl0325:zlprogresshud:0.0.1'
+implementation 'com.github.czl0325:zlprogresshud:0.0.1'
 ```
 
 ### 屏幕截图
