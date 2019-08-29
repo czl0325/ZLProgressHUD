@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -63,8 +64,8 @@ public class ZLProgressHUD {
             return;
 
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        decorView = (ViewGroup) ((Activity) context).getWindow().getDecorView();
-        rootView = (ViewGroup) layoutInflater.inflate(R.layout.layout_svprogresshud, null, false);
+        decorView = (FrameLayout) (((Activity) context).getWindow().getDecorView());
+        rootView = (FrameLayout) layoutInflater.inflate(R.layout.layout_svprogresshud,  null, false);
         rootView.setLayoutParams(new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT
         ));
@@ -91,8 +92,12 @@ public class ZLProgressHUD {
      */
     private void onAttached() {
         isShowing = true;
+        if (rootView.getParent()!=null) {
+            ((ViewGroup)rootView.getParent()).removeView(rootView);
+        }
         decorView.addView(rootView);
-        if(mSharedView.getParent()!=null)((ViewGroup)mSharedView.getParent()).removeView(mSharedView);
+        if(mSharedView.getParent()!=null)
+            ((ViewGroup)mSharedView.getParent()).removeView(mSharedView);
         rootView.addView(mSharedView);
     }
 
@@ -259,7 +264,8 @@ public class ZLProgressHUD {
     }
 
     public void dismissImmediately() {
-        mSharedView.dismiss();
+        Log.e("czl", Thread.currentThread().getName());
+        //mSharedView.dismiss();
         rootView.removeView(mSharedView);
         decorView.post(new Runnable() {
             @Override
@@ -272,12 +278,12 @@ public class ZLProgressHUD {
         if(onDismissListener != null){
             onDismissListener.onDismiss(this);
         }
-
     }
 
     public Animation getInAnimation() {
         Context context = contextWeak.get();
-        if(context == null) return null;
+        if(context == null)
+            return null;
 
         int res = ZLProgressHUDAnimateUtil.getAnimationResource(this.gravity, true);
         return AnimationUtils.loadAnimation(context, res);
@@ -285,7 +291,8 @@ public class ZLProgressHUD {
 
     public Animation getOutAnimation() {
         Context context = contextWeak.get();
-        if(context == null) return null;
+        if(context == null)
+            return null;
 
         int res = ZLProgressHUDAnimateUtil.getAnimationResource(this.gravity, false);
         return AnimationUtils.loadAnimation(context, res);

@@ -32,14 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
-
-        hud.showWithStatus("数据加载中...");
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                hud.dismiss();
-            }
-        },2000);
     }
 
     @Override
