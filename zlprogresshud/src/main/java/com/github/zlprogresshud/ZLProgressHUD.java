@@ -261,7 +261,12 @@ public class ZLProgressHUD {
     public void dismissImmediately() {
         mSharedView.dismiss();
         rootView.removeView(mSharedView);
-        decorView.removeView(rootView);
+        decorView.post(new Runnable() {
+            @Override
+            public void run() {
+                decorView.removeView(rootView);
+            }
+        });
         isShowing = false;
         isDismissing = false;
         if(onDismissListener != null){
