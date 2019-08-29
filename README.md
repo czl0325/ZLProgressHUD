@@ -5,7 +5,7 @@
 ### 导入
 
 ```
-implementation 'com.github.czl0325:ZLProgressHUD:0.0.1'
+implementation 'com.github.czl0325:ZLProgressHUD:0.0.2'
 ```
 
 ```
