@@ -95,10 +95,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             @Override
                             public void run() {
                                 progress[0]++;
-                                hud.showWithProgress("文件下载中...", progress[0]);
+                                hud.showWithProgress("视频压缩处理中...", progress[0]);
                                 if (progress[0] >= 100) {
                                     timer.cancel();
-                                    hud.showSuccessWithStatus("文件下载完成");
+                                    hud.showWithStatus("视频上传中...");
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            hud.showSuccessWithStatus("视频上传成功!");
+                                        }
+                                    },2000);
                                 }
                             }
                         });

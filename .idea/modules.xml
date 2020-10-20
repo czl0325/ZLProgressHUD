@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZLProgressHUD.iml" filepath="$PROJECT_DIR$/ZLProgressHUD.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zlprogresshud/zlprogresshud.iml" filepath="$PROJECT_DIR$/zlprogresshud/zlprogresshud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ZLProgressHUD.iml" filepath="$PROJECT_DIR$/.idea/ZLProgressHUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ZLProgressHUD.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ZLProgressHUD.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zlprogresshud/ZLProgressHUD.zlprogresshud.iml" filepath="$PROJECT_DIR$/.idea/modules/zlprogresshud/ZLProgressHUD.zlprogresshud.iml" />
     </modules>
   </component>
 </project>
